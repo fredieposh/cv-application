@@ -1,0 +1,117 @@
+const sections = {
+    0: {
+        id: 0, 
+        name: 'root',
+        childIds: [1, 2, 3],
+        required: false,
+        type: 'root'
+    },
+    1: {
+        id: 1,
+        name: 'general',
+        childIds: [4, 5, 6, 7],
+        required: false,
+        type: 'container'
+    },
+    2: {
+        id: 2,
+        name: 'education',
+        childIds: [8, 9, 10, 11, 12],
+        required: false,
+        type: 'container'
+    },
+    3: {
+        id: 3,
+        name: 'experience',
+        childIds: [13, 14, 15],
+        required: false,
+        type: 'experience'
+    },
+    4: {
+        id: 4,
+        name: 'first-name',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+    5: {
+        id: 5,
+        name: 'last-name',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+    6: {
+        id: 6,
+        name: 'email',
+        childIds: [],
+        required: true,
+        type: 'email'
+    },
+    7: {
+        id: 7,
+        name: 'phone',
+        childIds: [],
+        required: true,
+        type: 'tel'
+    },
+    8: {
+        id: 8,
+        name: 'institution',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+    9: {
+        id: 9,
+        name: 'start-year',
+        childIds: [],
+        required: true,
+        type: 'date'
+    },
+    10: {
+        id: 10,
+        name: 'end-year',
+        childIds: [],
+        required: true,
+        type: 'date'
+    },
+    11: {
+        id: 11,
+        name: 'degree',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+    12: {
+        id: 12,
+        name: 'gpa',
+        childIds: [],
+        required: true,
+        type: 'number'
+    },
+    13: {
+        id: 13,
+        name: 'firm',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+    14: {
+        id: 14,
+        name: 'years',
+        childIds: [],
+        required: true,
+        type: 'number'
+    },
+    15: {
+        id: 15,
+        name: 'role',
+        childIds: [],
+        required: true,
+        type: 'text'
+    },
+
+}
+
+export default sections
