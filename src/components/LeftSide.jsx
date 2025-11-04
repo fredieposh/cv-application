@@ -1,11 +1,8 @@
-import {useState} from 'react';
 import '../styles/LeftSide.css'
-import sections from '../section.js'
 
-export default function LeftSide() {
-    const [divList, setDivList] = useState(sections);
-    console.log(divList);
-    const root = divList[0];
+export default function LeftSide( {elementsList, handleChange} ) {
+
+    const root = elementsList[0];
     const containersList = root.childIds;
     return (
         <div className="left-side">
@@ -14,14 +11,15 @@ export default function LeftSide() {
                 <PopulateDiv
                     key={id}
                     id={id}
-                    divList={divList}
+                    divList={elementsList}
+                    handleChange = {handleChange}
                 />
             ))}
         </div>
     )
 }
 
-function PopulateDiv({id, divList}) {
+function PopulateDiv({ id, divList, handleChange }) {
     const container = divList[id];
     const childList = container.childIds;
     return (
@@ -37,7 +35,9 @@ function PopulateDiv({id, divList}) {
                     </label>
                         <input
                         type={divList[childId].type}
-                        id={divList[childId].name+'-input'}/>
+                        id={divList[childId].name+'-input'}
+                        value={divList[childId].innerText}
+                        onChange={(e) => handleChange(childId ,e)}/>
                 </div>
             ))}
         </div>

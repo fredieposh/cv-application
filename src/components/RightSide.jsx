@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import '../styles/RightSide.css'
-import sections from '../section'
 
-export default function RightSide() {
-    const [divList, setDivList] = useState(sections);
-    const root = divList[0];
+export default function RightSide( {elementsList} ) {
+    const root = elementsList[0];
     const containersIdList = root.childIds;
 
     return (
@@ -14,7 +11,7 @@ export default function RightSide() {
                 <PlaceTree
                 key={id}
                 id={id}
-                elementById={divList} />
+                elementById={elementsList} />
             ))}
         </div>
     )
@@ -27,7 +24,7 @@ function PlaceTree({ id, elementById}) {
             <div className = {containerName}>
                 {childIds.map(childId => (
                     <div key={childId} className={elementById[childId].name}>
-                        <p>{elementById[childId].name.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ') + ': '}</p>
+                        <p>{elementById[childId].name.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ') + ': ' + elementById[childId].innerText}</p>
                         <p></p>
                     </div>
                 ))}
