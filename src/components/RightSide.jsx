@@ -13,6 +13,7 @@ export default function RightSide( {elementsList} ) {
                 id={id}
                 elementById={elementsList} />
             ))}
+            <button>Submit</button>
         </div>
     )
 };

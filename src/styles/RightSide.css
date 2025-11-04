@@ -9,3 +9,14 @@
     padding-left: 3rem;
     text-align: left;
 }
+.right-side button {
+    width: 20%;
+    align-self: end;
+    margin-right: 2rem;
+    border: 1px solid black;
+}
+
+.right-side h2 {
+text-align: center;
+padding-right: 0.2rem;
+}
